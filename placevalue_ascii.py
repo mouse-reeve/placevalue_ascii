@@ -1,5 +1,9 @@
 ''' print out binary place value patterns '''
 
+import math
+import argparse
+
+
 def placevalue_patterner(function, height, width, placevalue, offset_y=0):
     ''' create a visualization of a place value pattern '''
     visual = []
@@ -15,7 +19,16 @@ def placevalue_patterner(function, height, width, placevalue, offset_y=0):
         visual.append(row)
     return '\n'.join(visual)
 
-# example
+
 if __name__ == '__main__':
-    func = lambda x, y: x ** 2 * y ** 2
-    print placevalue_patterner(func, 128, 128, 7)
+    parser = argparse.ArgumentParser()
+    parser.add_argument('function',
+                        help='The function to plot, e.g. "x ** 2 * y ** 2"',
+                        type=lambda s: eval('lambda x, y: {}'.format(s)))
+    parser.add_argument('placevalue', type=int)
+    parser.add_argument('width', type=int)
+    parser.add_argument('height', type=int)
+    args = parser.parse_args()
+    print(placevalue_patterner(args.function, args.height,
+                               args.width, args.placevalue))
+
