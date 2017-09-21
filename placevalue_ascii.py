@@ -1,6 +1,4 @@
 ''' print out binary place value patterns '''
-
-import math
 import argparse
 
 
