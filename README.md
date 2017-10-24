@@ -40,7 +40,7 @@ Now, replace the `1`s with an asterisk, `*` and the `0` with a space, ` `:
 ```
 
 ## Script example
-This command produces a 16 by 16 ascii pattern for the function `f(x, y) = x + y)` at place value.
+This command produces a 16 by 16 ascii pattern for the function `f(x, y) = x + y` at place value.
 ``` bash
 $ python placevalue_ascii.py "x + y" 3 16 16
             ****
