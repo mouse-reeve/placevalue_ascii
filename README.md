@@ -1,4 +1,4 @@
-# Placebalue Ascii
+# Placevalue Ascii
 
 Creates an ascii representation of the binary ouput of two variable function at a certian place value, arrayed on a grid.
 
